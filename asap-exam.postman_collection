@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "26375d00-199f-45c1-8888-c77b9372d2b7",
+		"name": "ASAP exam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19677045"
+	},
+	"item": [
+		{
+			"name": "External API",
+			"item": [
+				{
+					"name": "/v1/secret/files",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "aSuperSecretKey",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://echo-serv.tbxnet.com/v1/secret/files",
+							"protocol": "https",
+							"host": [
+								"echo-serv",
+								"tbxnet",
+								"com"
+							],
+							"path": [
+								"v1",
+								"secret",
+								"files"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/v1/secret/file/{filename}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "aSuperSecretKey",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://echo-serv.tbxnet.com/v1/secret/file/test2.csv",
+							"protocol": "https",
+							"host": [
+								"echo-serv",
+								"tbxnet",
+								"com"
+							],
+							"path": [
+								"v1",
+								"secret",
+								"file",
+								"test2.csv"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "v1/files/data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/v1/files/data",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"files",
+						"data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v1/files/data?fileName={fileName}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/v1/files/data?fileName=test15.csv",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"files",
+						"data"
+					],
+					"query": [
+						{
+							"key": "fileName",
+							"value": "test15.csv"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v1/files/data?fileName={unknownFile}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/v1/files/data?fileName=unknownFile",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"files",
+						"data"
+					],
+					"query": [
+						{
+							"key": "fileName",
+							"value": "unknownFile"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/v1/files/list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/v1/files/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"files",
+						"list"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
